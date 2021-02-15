@@ -19,7 +19,30 @@ let menuItems = [
   </div>
 
   The 'menuMaker' takes an array of menu items as its only argument.
+*/
 
+function menuMaker (menuItems) {
+  const menu = document.createElement("div");
+  menu.classList.add("menu");
+  const unorderedList = document.createElement("ul");
+
+  const orderedlist = document.createElement("li");
+  orderedlist.innerText = `${menuItems}`;
+
+  menu.appendChild(unorderedList);
+  unorderedList.appendChild(orderedlist);
+  console.log(menu);
+  
+  
+  let items = menuItems;
+  console.log(items);
+  return menu;
+
+}
+
+menuMaker();
+
+/*
   Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array.
   Add those items to the <ul>
 
